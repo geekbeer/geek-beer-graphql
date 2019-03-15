@@ -2,7 +2,7 @@ const { gql } = require('apollo-server');
 const geekBeerDefs = gql`
     type Event {
         id: ID!
-        name: String
+        title: String
         description: String
         date: String
         venue: Venue
