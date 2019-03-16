@@ -10,6 +10,9 @@ const event = require('./resolvers/GeekBeer/Event');
 const speaker = require('./resolvers/GeekBeer/Speaker');
 const venue = require('./resolvers/GeekBeer/Venue');
 const image = require('./resolvers/GeekBeer/Image');
+const contentSection = require('./resolvers/GeekBeer/ContentSection');
+const startPage = require('./resolvers/GeekBeer/StartPage');
+const pageContent = require('./resolvers/GeekBeer/PageContent');
 
 const typeDefs = [
     geekBeerQuery,
@@ -23,7 +26,10 @@ const resolvers = {
     ...event,
     ...speaker,
     ...venue,
-    ...image
+    ...image,
+    ...startPage,
+    ...contentSection,
+    ...pageContent
 };
 
 const server = new ApolloServer({

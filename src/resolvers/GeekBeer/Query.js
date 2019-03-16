@@ -16,6 +16,9 @@ module.exports = {
         },
         speaker: async (_, { id }) => {
             return ctl.getSpeaker(id);
+        },
+        startPage: async (_) => {
+            return ctl.getStartPage();
         }
     }
 };

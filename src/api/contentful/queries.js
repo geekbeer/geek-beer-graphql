@@ -73,10 +73,27 @@ const getSpeaker = async (entryId) => {
     }
 };
 
+const getStartPage = async () => {
+    try {
+        const talks = await getEntries({
+            'content_type': 'startPage',
+            include: 4,
+            limit: 1
+        });
+
+        return talks.items[0];
+    }
+    catch (e) {
+        console.log(e);
+        return null;
+    }
+};
+
 module.exports = {
     getTalk,
     getTalks,
     getEvent,
     getEvents,
-    getSpeaker
+    getSpeaker,
+    getStartPage
 };

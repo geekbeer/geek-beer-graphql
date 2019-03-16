@@ -3,6 +3,7 @@ const geekBeerDefs = gql`
     type Event {
         id: ID!
         title: String
+        uri: String
         description: String
         date: String
         venue: Venue
@@ -44,6 +45,21 @@ const geekBeerDefs = gql`
         fileType: String
         fileSize: Int
     }
+    
+    type StartPage {
+        id: ID!
+        pageTitle: String
+        pageDescription: String
+        content: [PageContent]
+    }
+    
+    type ContentSection {
+        id: ID!
+        title: String
+        body: String
+    }
+    
+    union PageContent = ContentSection | Event | Talk | Speaker | Venue | Image
 `;
 
 module.exports = geekBeerDefs;
