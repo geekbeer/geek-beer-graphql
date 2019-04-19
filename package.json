@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./src/index.js",
     "dev": "nodemon ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "10.x.x",
+    "npm": "6.4.x"
   },
   "keywords": [],
   "author": "",
