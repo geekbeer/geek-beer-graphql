@@ -53,6 +53,14 @@ const geekBeerDefs = gql`
         content: [PageContent]
     }
     
+    type Page {
+        id: ID!
+        uri: String
+        pageTitle: String
+        pageDescription: String
+        content: [PageContent]
+    }
+    
     type ContentSection {
         id: ID!
         title: String

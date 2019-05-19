@@ -47,6 +47,7 @@ const getEvents = async () => {
     try {
         const talks = await getEntries({
             'content_type': 'event',
+            'order': '-fields.date',
             include: 4,
             limit: 100,
             skip: 0
@@ -75,13 +76,30 @@ const getSpeaker = async (entryId) => {
 
 const getStartPage = async () => {
     try {
-        const talks = await getEntries({
+        const startPage = await getEntries({
             'content_type': 'startPage',
             include: 4,
             limit: 1
         });
 
-        return talks.items[0];
+        return startPage.items[0];
+    }
+    catch (e) {
+        console.log(e);
+        return null;
+    }
+};
+
+const getPage = async (uri) => {
+    try {
+        const page = await getEntries({
+            'content_type': 'webPage',
+            'fields.uri': uri,
+            include: 2,
+            limit: 1
+        });
+
+        return page.items[0];
     }
     catch (e) {
         console.log(e);
@@ -95,5 +113,6 @@ module.exports = {
     getEvent,
     getEvents,
     getSpeaker,
-    getStartPage
+    getStartPage,
+    getPage
 };

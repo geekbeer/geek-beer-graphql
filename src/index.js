@@ -12,6 +12,7 @@ const venue = require('./resolvers/GeekBeer/Venue');
 const image = require('./resolvers/GeekBeer/Image');
 const contentSection = require('./resolvers/GeekBeer/ContentSection');
 const startPage = require('./resolvers/GeekBeer/StartPage');
+const page = require('./resolvers/GeekBeer/Page');
 const pageContent = require('./resolvers/GeekBeer/PageContent');
 
 const typeDefs = [
@@ -28,6 +29,7 @@ const resolvers = {
     ...venue,
     ...image,
     ...startPage,
+    ...page,
     ...contentSection,
     ...pageContent
 };
