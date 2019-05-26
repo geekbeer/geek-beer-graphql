@@ -4,6 +4,7 @@ const geekBeerDefs = gql`
         id: ID!
         title: String
         uri: String
+        excerpt: String
         description: String
         date: String
         venue: Venue
