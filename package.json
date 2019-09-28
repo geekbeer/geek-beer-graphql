@@ -1,6 +1,6 @@
 {
   "name": "geek-beer-graphql",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,13 +16,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^2.4.8",
-    "contentful": "^7.4.0",
+    "apollo-server": "^2.9.4",
+    "contentful": "^7.10.0",
     "dotenv": "^6.2.0",
-    "graphql": "^14.1.1",
-    "graphql-tools": "^4.0.4"
+    "graphql": "^14.5.8",
+    "graphql-tools": "^4.0.5"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.19.2"
   }
 }
