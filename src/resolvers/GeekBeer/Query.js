@@ -19,6 +19,9 @@ module.exports = {
         },
         page: async (_, { uri }) => {
             return ctl.getPage(uri);
+        },
+        pages: async (_, { pageType }) => {
+            return ctl.getPages(pageType);
         }
     }
 };

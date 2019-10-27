@@ -6,5 +6,6 @@ type Query {
     talks: [Talk]
     speaker(id: ID): Speaker
     page(uri: String!): Page
+    pages(pageType: String!): [Page]
 }
 `;
