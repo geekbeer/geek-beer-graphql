@@ -8,17 +8,14 @@ module.exports = {
         talks: async (_) => {
             return ctl.getTalks();
         },
-        event: async (_, { id }) => {
-            return ctl.getEvent(id);
+        event: async (_, { uri }) => {
+            return ctl.getEvent(uri);
         },
         events: async (_) => {
             return ctl.getEvents();
         },
         speaker: async (_, { id }) => {
             return ctl.getSpeaker(id);
-        },
-        startPage: async (_) => {
-            return ctl.getStartPage();
         },
         page: async (_, { uri }) => {
             return ctl.getPage(uri);

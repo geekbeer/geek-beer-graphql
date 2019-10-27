@@ -30,12 +30,17 @@ const getTalks = async () => {
     }
 };
 
-const getEvent = async (entryId) => {
+const getEvent = async (uri) => {
+    console.log(uri);
     try {
-        return getEntry(entryId, {
+        const event = await getEntries({
             'content_type': 'event',
-            include: 2
+            'fields.uri': uri,
+            include: 4,
+            limit: 1
         });
+
+        return event.items[0];
     }
     catch (e) {
         console.log(e);
@@ -74,22 +79,6 @@ const getSpeaker = async (entryId) => {
     }
 };
 
-const getStartPage = async () => {
-    try {
-        const startPage = await getEntries({
-            'content_type': 'startPage',
-            include: 4,
-            limit: 1
-        });
-
-        return startPage.items[0];
-    }
-    catch (e) {
-        console.log(e);
-        return null;
-    }
-};
-
 const getPage = async (uri) => {
     try {
         const page = await getEntries({
@@ -113,6 +102,5 @@ module.exports = {
     getEvent,
     getEvents,
     getSpeaker,
-    getStartPage,
     getPage
 };

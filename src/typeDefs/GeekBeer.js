@@ -47,13 +47,6 @@ const geekBeerDefs = gql`
         fileSize: Int
     }
     
-    type StartPage {
-        id: ID!
-        pageTitle: String
-        pageDescription: String
-        content: [PageContent]
-    }
-    
     type Page {
         id: ID!
         uri: String
