@@ -53,6 +53,7 @@ const geekBeerDefs = gql`
         pageTitle: String
         pageDescription: String
         content: [PageContent]
+        position: Int
     }
     
     type ContentSection {
