@@ -101,6 +101,7 @@ const getPages = async (pageType) => {
             'content_type': 'webPage',
             'fields.pageType': pageType,
             include: 2,
+            order: "-fields.position",
         });
 
         return page.items;
